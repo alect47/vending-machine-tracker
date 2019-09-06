@@ -15,5 +15,6 @@ describe "When a user visits the vending machine show" do
     expect(page).to have_content("Cheetos")
     expect(page).to have_content(1.50)
     expect(page).to have_content(1.25)
+    expect(page).to have_content("Avg: 1.37")
   end
 end
