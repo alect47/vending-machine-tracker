@@ -1,0 +1,8 @@
+<%= @snack.name %>
+<span>Price: </span>
+<%=number_to_currency @snack.price %>
+<h3>Locations</h3>
+<% @snack.machines.each do |mach| %>
+<%# I know this is super ugly, wasn't quite sure how to do it all in one line %>
+  <%= "#{mach.location} ("%><%="#{mach.total} kinds of snacks, average price of:"%> <%=number_to_currency mach.average_price%><%=")"%>
+<% end %>
